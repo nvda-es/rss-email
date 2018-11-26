@@ -8,10 +8,11 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import html2text
 import time
+import os
 # retrieve previously stored IDS to send only new posts
 currentids=[]
 try:
-	f=open("ids.json", "r")
+	f=open(os.path.join(os.path.abspath(os.path.dirname(__file__)), 'ids.json'), "r")
 	currentids=json.load(f)
 	f.close()
 except:
@@ -56,7 +57,7 @@ for post in posts:
 	time.sleep(1)
 # Finally, save the new IDS to a file
 try:
-	f=open("ids.json", "w")
+	f=open(os.path.join(os.path.abspath(os.path.dirname(__file__)), 'ids.json'), "w")
 	json.dump(newids, f)
 	f.close()
 except:
