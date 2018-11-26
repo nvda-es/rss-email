@@ -15,5 +15,5 @@ Puedes instalar estas dos últimas bibliotecas mediante pip, o utilizando el ges
 ## Modo de uso
 
 Para utilizar este script, basta con ejecutarlo: `python rss-email.py`
-La primera vez que se ejecute, enviará por correo toda la fuente RSS en orden, empezando por el elemento más antiguo. En las siguientes ejecuciones sólo enviará las nuevas entradas, o no enviará nada si no hay nuevo contenido disponible.
+La primera vez que se ejecute, enviará por correo toda la fuente RSS en orden, empezando por el elemento más antiguo. En las siguientes ejecuciones sólo enviará las nuevas entradas, o no enviará nada si no hay nuevo contenido disponible. Los identificadores de las entradas ya publicadas se almacenan en el archivo ids.json, por lo que es importante no borrarlo.
 Nota: el algoritmo de detección de nuevo contenido es dependiente de los metadatos ofrecidos por WordPress.
